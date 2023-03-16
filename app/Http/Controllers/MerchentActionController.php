@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-class PartnerActionController extends Controller
+class MerchentActionController extends Controller
 {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function sendNotification(Request $request)
+    public function updateSubscriptionStatus(Request $request)
     {
         try {
             
