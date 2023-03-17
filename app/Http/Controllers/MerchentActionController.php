@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class MerchentActionController extends Controller
 {
@@ -54,6 +55,8 @@ class MerchentActionController extends Controller
                 'Content-Type: application/json',
                 'Authorization: Bearer '.$jwt,
             );
+
+            Http::withHeaders($headers)->post('');
             
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, '');
